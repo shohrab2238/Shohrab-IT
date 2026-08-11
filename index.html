@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shohrab Hossen | Editable Portfolio</title>
+<style>
+:root{--navy:#172033;--orange:#ff7447;--soft:#fff5ef;--muted:#697184}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--navy);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}.container{max-width:1120px;margin:auto;padding:0 24px}
+nav{position:absolute;top:0;left:0;width:100%;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:22px 6%;background:#ffffff15}
+.logo{font-size:24px;font-weight:800}.logo span,.orange{color:var(--orange)}
+.navlinks{display:flex;gap:25px;align-items:center;font-size:14px;font-weight:700}.navlinks a:hover{color:var(--orange)}
+.btn{border:1px solid var(--orange);padding:12px 20px;border-radius:10px;font-weight:700;cursor:pointer;background:white;color:var(--navy)}.primary{background:var(--orange);color:#fff}
+.hero{min-height:680px;padding:120px 6% 70px;display:grid;grid-template-columns:1fr 1fr;align-items:center;background:linear-gradient(120deg,#fff,#fff6f1)}
+.hero h1{font-size:clamp(50px,7vw,86px);line-height:.98;margin:12px 0 20px;letter-spacing:-3px}.hero p{color:var(--muted);font-size:18px;max-width:540px}
+.hero-img{display:flex;justify-content:center;position:relative}.hero-img:before{content:"";position:absolute;width:500px;height:500px;background:#ffd9c9;border-radius:50%;top:20px}
+.hero-img img{position:relative;width:min(100%,520px);height:520px;object-fit:cover;border-radius:260px 260px 30px 30px;box-shadow:0 25px 60px #17203320}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.social{display:flex;gap:9px;margin-top:20px}.social a{background:var(--navy);color:white;width:38px;height:38px;border-radius:9px;display:grid;place-items:center;font-weight:bold}
+section{padding:90px 0}.head{text-align:center;margin-bottom:45px}.tag{text-transform:uppercase;color:var(--orange);font-size:13px;font-weight:800;letter-spacing:1px}.head h2{font-size:40px;margin:5px 0}
+.about{display:grid;grid-template-columns:1.3fr 1fr .8fr;gap:30px;padding:38px;border-radius:22px;box-shadow:0 12px 45px #17203312}.about h3{font-size:28px;margin-top:0}.muted{color:var(--muted)}.info div{padding:9px 0;border-bottom:1px solid #eee}.info b{display:block;font-size:13px}.stats{background:var(--navy);color:#fff;border-radius:17px;padding:20px}.stats div{padding:11px 0;border-bottom:1px solid #ffffff22}.stats strong{display:block;color:#ff9a76;font-size:25px}
+.services{background:#fffaf7}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.card{padding:28px 20px;border:1px solid #eee;background:white;border-radius:17px;text-align:center}.icon{width:50px;height:50px;border-radius:50%;background:#fff0e9;display:grid;place-items:center;margin:auto auto 15px;font-size:22px}.card h3{font-size:17px}.card p{font-size:14px;color:var(--muted)}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.project{border:1px solid #eee;border-radius:17px;overflow:hidden}.project-img{height:190px;background:#26324a;color:#fff;display:grid;place-items:center;font-size:20px;font-weight:bold}.project:nth-child(2) .project-img{background:#ff8057}.project:nth-child(3) .project-img{background:#51698e}.project-body{padding:18px}.project-body small{color:var(--orange);font-weight:bold}
+.cta{margin:0 6%;padding:32px 42px;background:var(--navy);border-radius:18px;color:white;display:flex;justify-content:space-between;align-items:center}.cta h2{margin:0}.cta p{color:#ccd2dd}footer{text-align:center;color:var(--muted);padding:30px}
+#editBtn{position:fixed;right:22px;bottom:22px;z-index:20;box-shadow:0 10px 25px #0002}
+.overlay{display:none;position:fixed;inset:0;background:#0008;z-index:30;padding:20px;overflow:auto}.overlay.open{display:block}.panel{max-width:900px;margin:20px auto;background:#fff;border-radius:18px;padding:25px;box-shadow:0 20px 60px #0005}.panel h2{margin-top:0}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-weight:700;font-size:13px}.field input,.field textarea{font:inherit;padding:11px;border:1px solid #ddd;border-radius:9px}.field textarea{min-height:90px;resize:vertical}.project-editor{border:1px solid #eee;border-radius:12px;padding:15px;margin-top:15px}.close{float:right;border:0;background:#eee;border-radius:8px;padding:8px 12px;cursor:pointer}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.hero-img{margin-top:50px}.about{grid-template-columns:1fr}.grid4{grid-template-columns:1fr 1fr}.projects{grid-template-columns:1fr 1fr}.navlinks{display:none}}
+@media(max-width:550px){.grid4,.projects,.fields{grid-template-columns:1fr}.field.full{grid-column:auto}.hero{padding-left:5%;padding-right:5%}.hero-img img{height:430px}.hero-img:before{width:400px;height:400px}.cta{margin:0 5%;display:block}.cta .btn{margin-top:15px}}
+</style>
+</head>
+<body>
+
+<nav><a class="logo" href="#">Shohrab<span>.</span></a><div class="navlinks">
+<a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a>
+<a class="btn primary" href="#contact">Hire Me</a></div></nav>
+
+<header class="hero" id="home"><div>
+<div class="orange" style="font-weight:800;font-size:18px">Hi, I'm</div>
+<h1><span id="heroName">Shohrab</span><br><span class="orange" id="heroLast">Hossen</span></h1>
+<p id="heroRole">Web Developer · Designer · Problem Solver</p><p id="heroBio">I create modern, responsive websites and digital experiences that help brands grow.</p>
+<div class="actions"><a class="btn primary" href="#portfolio">View My Work →</a><a class="btn" id="cvBtn" href="#">Download CV</a></div>
+<div class="social"><a id="fb" href="#">f</a><a id="li" href="#">in</a><a id="gh" href="#">⌘</a><a id="mailIcon" href="#">✉</a></div>
+</div><div class="hero-img"><img id="profileImg" src="profile.jpg" alt="Profile"></div></header>
+
+<section id="about"><div class="container"><div class="head"><div class="tag">About Me</div><h2>Who I Am</h2></div>
+<div class="about"><div><h3 id="aboutTitle">Nice to meet you.</h3><p class="muted" id="aboutText">I'm Shohrab Hossen, a passionate web developer and designer based in Bangladesh. I love creating beautiful, functional and user-friendly websites.</p></div>
+<div class="info"><div><b>Name</b><span id="infoName">Shohrab Hossen</span></div><div><b>Email</b><span id="infoEmail">shohrabhossen@gmail.com</span></div><div><b>Phone</b><span id="infoPhone">+880 1712 345678</span></div><div><b>Location</b><span id="infoLocation">Bangladesh</span></div><div><b>Availability</b><span id="infoAvailability">Available for freelance</span></div></div>
+<div class="stats"><div><strong id="statYears">2+</strong>Years Experience</div><div><strong id="statProjects">20+</strong>Projects</div><div><strong id="statClients">15+</strong>Happy Clients</div></div></div></div></section>
+
+<section class="services" id="services"><div class="container"><div class="head"><div class="tag">What I Do</div><h2>My Services</h2></div><div class="grid4" id="serviceGrid"></div></div></section>
+
+<section id="portfolio"><div class="container"><div class="head"><div class="tag">My Work</div><h2>Featured Projects</h2></div><div class="projects" id="projectGrid"></div></div></section>
+
+<div class="cta" id="contact"><div><h2>Let's Work Together</h2><p id="ctaText">Have a project in mind? Let's build something amazing together.</p></div><a class="btn primary" id="contactBtn" href="mailto:shohrabhossen@gmail.com">Get In Touch →</a></div>
+<footer>© <span id="year">2026</span> <span id="footerName">Shohrab Hossen</span>. All rights reserved.</footer>
+
+<button id="editBtn" class="btn primary">⚙ Edit Website</button>
+
+<div class="overlay" id="editor"><div class="panel">
+<button class="close" onclick="closeEditor()">✕ Close</button><h2>✏️ Edit Your Website</h2>
+<p class="muted">এখান থেকে তথ্য পরিবর্তন করে <b>Save Changes</b> চাপুন। এই browser-এ তথ্য সংরক্ষণ হবে।</p>
+<div class="toolbar"><button class="btn primary" onclick="saveData()">💾 Save Changes</button><button class="btn" onclick="resetData()">↺ Reset</button><button class="btn" onclick="exportData()">⬇ Export Backup</button><label class="btn">⬆ Import Backup<input id="importFile" type="file" accept=".json" hidden></label></div>
+<div class="fields">
+<div class="field"><label>First Name</label><input id="eFirst"></div><div class="field"><label>Last Name</label><input id="eLast"></div>
+<div class="field full"><label>Role / Profession</label><input id="eRole"></div>
+<div class="field full"><label>Short Bio</label><textarea id="eBio"></textarea></div>
+<div class="field full"><label>About Me</label><textarea id="eAbout"></textarea></div>
+<div class="field"><label>Email</label><input id="eEmail"></div><div class="field"><label>Phone</label><input id="ePhone"></div>
+<div class="field"><label>Location</label><input id="eLocation"></div><div class="field"><label>Availability</label><input id="eAvailability"></div>
+<div class="field"><label>Years Experience</label><input id="eYears"></div><div class="field"><label>Projects</label><input id="eProjects"></div>
+<div class="field"><label>Happy Clients</label><input id="eClients"></div><div class="field"><label>Facebook URL</label><input id="eFb"></div>
+<div class="field"><label>LinkedIn URL</label><input id="eLi"></div><div class="field"><label>GitHub URL</label><input id="eGh"></div>
+<div class="field"><label>CV URL / File path</label><input id="eCv"></div><div class="field"><label>Contact Button Email</label><input id="eContactEmail"></div>
+<div class="field full"><label>Profile Photo (choose a new image)</label><input id="ePhoto" type="file" accept="image/*"></div>
+</div>
+<h3 style="margin-top:28px">Services</h3><div id="serviceEditors"></div>
+<h3 style="margin-top:28px">Projects</h3><div id="projectEditors"></div>
+</div></div>
+
+<script>
+const defaults={
+first:"Shohrab",last:"Hossen",role:"Web Developer · Designer · Problem Solver",
+bio:"I create modern, responsive websites and digital experiences that help brands grow.",
+about:"I'm Shohrab Hossen, a passionate web developer and designer based in Bangladesh. I love creating beautiful, functional and user-friendly websites.",
+email:"shohrabhossen@gmail.com",phone:"+880 1712 345678",location:"Bangladesh",availability:"Available for freelance",
+years:"2+",projects:"20+",clients:"15+",fb:"#",li:"#",gh:"#",cv:"#",contactEmail:"shohrabhossen@gmail.com",
+services:[
+["💻","Web Development","Fast, responsive and modern websites using the latest technologies."],
+["✎","UI/UX Design","Clean, user-friendly interfaces that deliver great user experiences."],
+["🛒","E-Commerce","Powerful e-commerce solutions that help businesses sell online."],
+["🚀","SEO & Performance","Optimized websites built for speed, visibility and performance."]
+],
+projects:[
+["Creative Website","WEB DESIGN","Creative Agency Website"],
+["E-Commerce","E-COMMERCE","Online Store"],
+["SaaS","LANDING PAGE","Modern SaaS Landing Page"]
+]};
+let data=JSON.parse(localStorage.getItem("shohrabPortfolio"))||structuredClone(defaults);
+function $(id){return document.getElementById(id)}
+data.services=normalizeArray(data.services,defaults.services);
+data.projects=normalizeArray(data.projects,defaults.projects);
+function render(){
+$("heroName").textContent=data.first;$("heroLast").textContent=data.last;$("heroRole").textContent=data.role;$("heroBio").textContent=data.bio;
+$("aboutText").textContent=data.about;$("infoName").textContent=data.first+" "+data.last;$("infoEmail").textContent=data.email;$("infoPhone").textContent=data.phone;$("infoLocation").textContent=data.location;$("infoAvailability").textContent=data.availability;
+$("statYears").textContent=data.years;$("statProjects").textContent=data.projects;$("statClients").textContent=data.clients;$("footerName").textContent=data.first+" "+data.last;
+$("fb").href=data.fb;$("li").href=data.li;$("gh").href=data.gh;$("mailIcon").href="mailto:"+data.email;$("cvBtn").href=data.cv||"#";$("contactBtn").href="mailto:"+data.contactEmail;
+$("serviceGrid").innerHTML=data.services.map(x=>`<div class="card"><div class="icon">${x[0]}</div><h3>${x[1]}</h3><p>${x[2]}</p></div>`).join("");
+$("projectGrid").innerHTML=data.projects.map((x,i)=>`<article class="project"><div class="project-img">${x[0]}</div><div class="project-body"><small>${x[1]}</small><h3>${x[2]}</h3></div></article>`).join("");
+fillEditor();
+}
+function fillEditor(){
+["first","last","role","bio","about","email","phone","location","availability","years","projects","clients","fb","li","gh","cv","contactEmail"].forEach(k=>$("e"+k.charAt(0).toUpperCase()+k.slice(1)).value=data[k]);
+$("serviceEditors").innerHTML=data.services.map((x,i)=>`<div class="project-editor"><div class="fields"><div class="field"><label>Icon</label><input id="s${i}a" value="${esc(x[0])}"></div><div class="field"><label>Title</label><input id="s${i}b" value="${esc(x[1])}"></div><div class="field full"><label>Description</label><textarea id="s${i}c">${esc(x[2])}</textarea></div></div></div>`).join("");
+$("projectEditors").innerHTML=data.projects.map((x,i)=>`<div class="project-editor"><div class="fields"><div class="field"><label>Project Name</label><input id="p${i}a" value="${esc(x[0])}"></div><div class="field"><label>Category</label><input id="p${i}b" value="${esc(x[1])}"></div><div class="field full"><label>Project Description / Title</label><input id="p${i}c" value="${esc(x[2])}"></div></div></div>`).join("");
+}
+function esc(v){return String(v).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;")}
+function normalizeArray(value,fallback){
+  return Array.isArray(value)?value:JSON.parse(JSON.stringify(fallback));
+}
+function readEditor(){
+  ["first","last","role","bio","about","email","phone","location","availability","years","projects","clients","fb","li","gh","cv","contactEmail"].forEach(k=>{
+    const el=$("e"+k.charAt(0).toUpperCase()+k.slice(1)); if(el)data[k]=el.value;
+  });
+  const services=[],projects=[];
+  for(let i=0;i<4;i++){const a=$("s"+i+"a"),b=$("s"+i+"b"),c=$("s"+i+"c");if(a&&b&&c)services.push([a.value,b.value,c.value])}
+  for(let i=0;i<3;i++){const a=$("p"+i+"a"),b=$("p"+i+"b"),c=$("p"+i+"c");if(a&&b&&c)projects.push([a.value,b.value,c.value])}
+  data.services=services.length?services:normalizeArray(data.services,defaults.services);
+  data.projects=projects.length?projects:normalizeArray(data.projects,defaults.projects);
+}
+function saveData(){
+readEditor();localStorage.setItem("shohrabPortfolio",JSON.stringify(data));
+const f=$("ePhoto").files[0];if(f){const r=new FileReader();r.onload=()=>{localStorage.setItem("shohrabPhoto",r.result);$("profileImg").src=r.result};r.readAsDataURL(f)}
+render();$("editor").classList.remove("open");alert("Saved successfully! আপনার changes এই browser-এ save হয়েছে.");
+}
+function resetData(){if(confirm("Reset all information to the original demo data?")){localStorage.removeItem("shohrabPortfolio");localStorage.removeItem("shohrabPhoto");data=structuredClone(defaults);render();$("profileImg").src="profile.jpg"}}
+function exportData(){readEditor();const blob=new Blob([JSON.stringify(data,null,2)],{type:"application/json"});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="shohrab-portfolio-backup.json";a.click()}
+$("importFile").addEventListener("change",e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{data=JSON.parse(r.result);render();alert("Backup imported. Save Changes চাপুন.");}catch{alert("Invalid backup file.")}};r.readAsText(f)});
+function openEditor(){$("editor").classList.add("open");fillEditor()}function closeEditor(){$("editor").classList.remove("open")}
+$("editBtn").onclick=openEditor;
+const savedPhoto=localStorage.getItem("shohrabPhoto");if(savedPhoto)$("profileImg").src=savedPhoto;
+render();
+</script>
+</body>
+</html>
