@@ -1,0 +1,57 @@
+{
+  "first": "Shohrab",
+  "last": "Hossen",
+  "role": "IT Expert - Microfin360 Software Expert - Problem Solver",
+  "bio": "I am a skilled IT Manager with 3 years of overall experience in the IT field, including 1 year of specializing in the NGO sector. I expert in Microfin360 software management, CIB Data processing, and delivering comprehensive Branch IT support. I am dedicated to keeping organizational digital operations secure and running smoothly.",
+  "about": "I am a dedicated IT Manager with 3 years of overall experience in the tech sector, including 1 year of specialized experience in the NGO industry. My core expertise lies in managing Microfin360 software, handling sensitive CIB Data, and providing end-to-end Branch IT support.",
+  "email": "shohrab223806@gmail.com",
+  "phone": "+880 1304 100014",
+  "location": "Bangladesh",
+  "availability": "Available for freelance",
+  "years": "3+",
+  "projects": [
+    [
+      "Centralized Microfin360 Optimization & Branch Rollout",
+      "Software Deployment & Optimization",
+      "Led the remote installation, configuration, and performance tuning of Microfin360 software across multiple NGO branches. Resolved latency issues, managed user permissions, and provided continuous technical support to ensure seamless daily financial operations for branch staff."
+    ],
+    [
+      "Automated CIB Data Integration & Secure Transmission",
+      "Data Management & Security",
+      "Developed a streamlined workflow for collecting, validating, and processing Credit Information Bureau (CIB) data from various branches. Implemented secure data transmission protocols and automated backup systems to ensure compliance with regulatory standards and eliminate data loss risks."
+    ],
+    [
+      "Multi-Branch Remote IT Helpdesk Infrastructure",
+      "Remote Support & Network Infrastructure",
+      "Designed and deployed a centralized remote IT support system using secure remote desktop tools (RDP/AnyDesk) and VPNs. Successfully managed troubleshooting for network connectivity, hardware configuration, and software errors across distant branch offices, reducing system downtime by minimizing the need for physical IT visits."
+    ]
+  ],
+  "clients": "15+",
+  "fb": "https://www.facebook.com/shohrab.tm",
+  "li": "https://www.linkedin.com/in/shohrab-hossen-s/",
+  "gh": "https://github.com/shohrab2238",
+  "cv": "#",
+  "contactEmail": "shohrab223806@gmail.com",
+  "services": [
+    [
+      "💻",
+      "Remote IT Support",
+      "Provide end-to-end remote technical support to off-site users and multiple NGO branches using tools like AnyDesk, TeamViewer, or Remote Desktop (RDP)."
+    ],
+    [
+      "✎",
+      "Software & OS Management",
+      "Remotely install, configure, and troubleshoot software applications, including Microfin360, operating systems, and antivirus tools"
+    ],
+    [
+      "🛒",
+      "Data & Backup Management",
+      "Assist remote branches with secure CIB Data transfers and implement automated cloud backup protocols to prevent data loss."
+    ],
+    [
+      "🚀",
+      "IT Helpdesk Documentation",
+      "Maintain accurate logs of remote support tickets, track recurring system bugs, and create step-by-step IT guides for non-technical staff."
+    ]
+  ]
+}
