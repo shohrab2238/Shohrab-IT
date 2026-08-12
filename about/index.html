@@ -2,145 +2,1238 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>About Shohrab Hossen | IT Expert & Microfin360 Specialist</title>
 
-  <meta name="description" content="Learn about Shohrab Hossen, an IT professional specializing in Microfin360 software management, CIB data processing, branch IT support and technology solutions.">
+  <meta
+    name="description"
+    content="About Shohrab Hossen — IT Expert & Microfin360 Specialist specializing in Microfin360, CIB data processing, IT support and web technology."
+  >
+
   <meta name="author" content="Shohrab Hossen">
   <meta name="robots" content="index, follow">
 
-  <link rel="canonical" href="https://shohrab2238.github.io/Shohrab-IT/about/">
+  <link
+    rel="canonical"
+    href="https://shohrab2238.github.io/Shohrab-IT/about/"
+  >
 
   <style>
+    /* =========================
+       RESET
+    ========================== */
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fb;
-      color: #222;
+      font-family:
+        Inter,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+      background: #f6f8fc;
+      color: #172033;
       line-height: 1.7;
+      overflow-x: hidden;
     }
 
-    header {
-      background: linear-gradient(135deg, #0d47a1, #1976d2);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
 
-    header h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
+    img {
+      max-width: 100%;
+      display: block;
     }
 
-    header p {
-      font-size: 18px;
-      opacity: 0.95;
+    button {
+      font-family: inherit;
     }
 
     .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: 40px auto;
+      width: min(1120px, 92%);
+      margin: auto;
     }
 
-    .card {
-      background: white;
-      padding: 35px;
-      margin-bottom: 25px;
-      border-radius: 14px;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(3, 15, 42, 0.94);
+      backdrop-filter: blur(14px);
+
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
-    .profile {
-      text-align: center;
+    .nav-inner {
+      min-height: 70px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
     }
 
-    .profile img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: #2d8cff;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      position: relative;
+
+      color: #dbe7ff;
+      font-size: 14px;
+      font-weight: 600;
+
+      padding: 25px 0;
+
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #ffffff;
+    }
+
+    .nav-links a.active::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 16px;
+
+      height: 2px;
+      border-radius: 5px;
+
+      background: #2d8cff;
+    }
+
+    .nav-button {
+      background: linear-gradient(135deg, #1677ff, #2d8cff);
+
+      color: white;
+
+      padding: 11px 20px;
+
+      border-radius: 8px;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      box-shadow: 0 8px 25px rgba(45, 140, 255, 0.25);
+
+      transition: 0.3s;
+    }
+
+    .nav-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(45, 140, 255, 0.35);
+    }
+
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+
+      min-height: 620px;
+
+      display: flex;
+      align-items: center;
+
+      background:
+        radial-gradient(
+          circle at 85% 45%,
+          rgba(30, 120, 255, 0.38),
+          transparent 28%
+        ),
+        linear-gradient(
+          120deg,
+          #020b20 0%,
+          #06183c 52%,
+          #0b52bd 100%
+        );
+
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 350px;
+      height: 350px;
+
+      border: 1px solid rgba(60, 150, 255, 0.2);
+
       border-radius: 50%;
-      border: 5px solid #1976d2;
+
+      right: -100px;
+      top: 80px;
+    }
+
+    .hero::after {
+      content: "";
+
+      position: absolute;
+
+      width: 280px;
+      height: 280px;
+
+      border-radius: 50%;
+
+      right: -120px;
+      bottom: -130px;
+
+      background: rgba(0, 105, 255, 0.18);
+
+      filter: blur(5px);
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+
+      display: grid;
+
+      grid-template-columns: 1.05fr 0.95fr;
+
+      align-items: center;
+
+      gap: 60px;
+
+      padding: 75px 0;
+    }
+
+    .hero-content {
+      max-width: 650px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+
+      align-items: center;
+
+      background: rgba(38, 132, 255, 0.2);
+
+      border: 1px solid rgba(80, 160, 255, 0.25);
+
+      color: #80bbff;
+
+      padding: 7px 16px;
+
+      border-radius: 50px;
+
+      font-size: 12px;
+      font-weight: 800;
+
+      letter-spacing: 1px;
+
       margin-bottom: 20px;
     }
 
-    h2 {
-      color: #0d47a1;
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 72px);
+
+      line-height: 1.05;
+
+      letter-spacing: -2.5px;
+
       margin-bottom: 15px;
-      font-size: 28px;
     }
 
-    h3 {
-      color: #1976d2;
-      margin-bottom: 8px;
+    .hero h1 span {
+      color: #2387ff;
     }
 
-    ul {
-      padding-left: 25px;
+    .hero-role {
+      font-size: 22px;
+
+      font-weight: 700;
+
+      color: #e6efff;
+
+      margin-bottom: 18px;
     }
 
-    li {
-      margin-bottom: 8px;
+    .hero-description {
+      max-width: 570px;
+
+      color: #bdcbe4;
+
+      font-size: 16px;
+
+      margin-bottom: 30px;
     }
 
-    .skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
-      margin-top: 20px;
+    .hero-buttons {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 13px;
     }
 
-    .skill {
-      background: #eef5ff;
-      padding: 18px;
-      border-radius: 10px;
-      border-left: 4px solid #1976d2;
-    }
+    .btn {
+      display: inline-flex;
 
-    .contact {
-      text-align: center;
-    }
+      align-items: center;
+      justify-content: center;
 
-    .contact a {
-      display: inline-block;
-      margin: 8px;
-      padding: 10px 18px;
-      background: #1976d2;
-      color: white;
-      text-decoration: none;
+      gap: 9px;
+
+      padding: 13px 22px;
+
       border-radius: 8px;
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+      transition: 0.3s;
     }
 
-    .contact a:hover {
-      background: #0d47a1;
+    .btn-primary {
+      background: #1677ff;
+      color: white;
+
+      box-shadow: 0 10px 30px rgba(22, 119, 255, 0.3);
     }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: #2785ff;
+    }
+
+    .btn-outline {
+      color: white;
+
+      border: 1px solid rgba(255,255,255,0.7);
+
+      background: rgba(255,255,255,0.03);
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: #062052;
+    }
+
+
+    /* =========================
+       PROFILE IMAGE
+    ========================== */
+
+    .hero-photo {
+      display: flex;
+      justify-content: center;
+
+      position: relative;
+    }
+
+    .photo-ring {
+      position: relative;
+
+      width: 390px;
+      height: 390px;
+
+      padding: 10px;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(50, 145, 255, 0.8);
+
+      box-shadow:
+        0 0 0 18px rgba(35, 135, 255, 0.04),
+        0 0 80px rgba(35, 135, 255, 0.25);
+    }
+
+    .photo-ring::before {
+      content: "";
+
+      position: absolute;
+
+      width: 14px;
+      height: 14px;
+
+      background: #2186ff;
+
+      border-radius: 50%;
+
+      top: 25px;
+      right: 15px;
+
+      box-shadow: 0 0 20px #2186ff;
+    }
+
+    .photo-ring img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      border-radius: 50%;
+
+      border: 5px solid white;
+    }
+
+    .photo-card {
+      position: absolute;
+
+      bottom: -10px;
+      left: 50%;
+
+      transform: translateX(-50%);
+
+      min-width: 230px;
+
+      padding: 15px 20px;
+
+      border-radius: 12px;
+
+      background: white;
+      color: #14213d;
+
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+
+      display: flex;
+      align-items: center;
+
+      gap: 12px;
+    }
+
+    .photo-icon {
+      width: 44px;
+      height: 44px;
+
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+
+      background: #e9f3ff;
+
+      color: #1677ff;
+
+      font-size: 20px;
+    }
+
+    .photo-card strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .photo-card small {
+      color: #69758b;
+      font-size: 12px;
+    }
+
+
+    /* =========================
+       SECTION
+    ========================== */
+
+    .section {
+      padding: 85px 0;
+    }
+
+    .section-light {
+      background: white;
+    }
+
+    .section-title {
+      text-align: center;
+
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 34px;
+
+      color: #10254e;
+
+      margin-bottom: 10px;
+    }
+
+    .title-line {
+      width: 70px;
+      height: 3px;
+
+      background: #1677ff;
+
+      margin: auto;
+
+      border-radius: 10px;
+
+      position: relative;
+    }
+
+    .title-line::after {
+      content: "";
+
+      position: absolute;
+
+      width: 8px;
+      height: 8px;
+
+      background: #1677ff;
+
+      border-radius: 50%;
+
+      left: 50%;
+      top: 50%;
+
+      transform: translate(-50%, -50%);
+
+      border: 3px solid white;
+    }
+
+
+    /* =========================
+       ABOUT
+    ========================== */
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 60px;
+
+      align-items: center;
+    }
+
+    .about-text {
+      color: #536176;
+      font-size: 15px;
+    }
+
+    .about-text p {
+      margin-bottom: 18px;
+    }
+
+    .info-card {
+      background: white;
+
+      border: 1px solid #e4eaf4;
+
+      border-radius: 14px;
+
+      padding: 30px;
+
+      box-shadow: 0 12px 35px rgba(18, 42, 82, 0.07);
+    }
+
+    .info-row {
+      display: grid;
+
+      grid-template-columns: 35px 120px 1fr;
+
+      align-items: center;
+
+      gap: 10px;
+
+      padding: 13px 0;
+
+      border-bottom: 1px solid #edf1f7;
+
+      font-size: 14px;
+    }
+
+    .info-row:last-child {
+      border-bottom: none;
+    }
+
+    .info-icon {
+      width: 30px;
+      height: 30px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 8px;
+
+      background: #edf5ff;
+
+      color: #1677ff;
+    }
+
+    .info-label {
+      font-weight: 700;
+      color: #273753;
+    }
+
+    .info-value {
+      color: #657187;
+    }
+
+
+    /* =========================
+       EXPERTISE
+    ========================== */
+
+    .expertise-grid {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      gap: 20px;
+    }
+
+    .expertise-card {
+      position: relative;
+
+      background: white;
+
+      border: 1px solid #e3e9f2;
+
+      border-radius: 14px;
+
+      padding: 32px 22px;
+
+      text-align: center;
+
+      box-shadow: 0 10px 30px rgba(20, 40, 80, 0.05);
+
+      transition: 0.35s;
+
+      overflow: hidden;
+    }
+
+    .expertise-card::after {
+      content: "";
+
+      position: absolute;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      height: 3px;
+
+      background: #1677ff;
+
+      transform: scaleX(0);
+
+      transition: 0.35s;
+    }
+
+    .expertise-card:hover {
+      transform: translateY(-8px);
+
+      box-shadow: 0 18px 45px rgba(20, 40, 80, 0.11);
+    }
+
+    .expertise-card:hover::after {
+      transform: scaleX(1);
+    }
+
+    .expertise-icon {
+      width: 58px;
+      height: 58px;
+
+      margin: 0 auto 18px;
+
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+
+      background: #edf5ff;
+
+      color: #1677ff;
+
+      font-size: 25px;
+    }
+
+    .expertise-card h3 {
+      font-size: 17px;
+
+      color: #14264b;
+
+      margin-bottom: 10px;
+    }
+
+    .expertise-card p {
+      color: #69758a;
+
+      font-size: 13px;
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       SKILLS + GOAL
+    ========================== */
+
+    .skills-goal {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 60px;
+    }
+
+    .sub-title {
+      font-size: 24px;
+
+      color: #10254e;
+
+      margin-bottom: 25px;
+    }
+
+    .skill-columns {
+      display: grid;
+
+      grid-template-columns: 1fr 1fr;
+
+      gap: 10px 30px;
+    }
+
+    .skill-item {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 10px;
+
+      color: #46536a;
+
+      font-size: 14px;
+
+      padding: 8px 0;
+    }
+
+    .check {
+      flex-shrink: 0;
+
+      width: 20px;
+      height: 20px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: #1677ff;
+
+      color: white;
+
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    .goal-box {
+      display: flex;
+
+      gap: 25px;
+
+      align-items: center;
+
+      background: #f7faff;
+
+      border: 1px solid #e0e9f8;
+
+      border-radius: 15px;
+
+      padding: 30px;
+    }
+
+    .goal-icon {
+      flex-shrink: 0;
+
+      width: 75px;
+      height: 75px;
+
+      border-radius: 50%;
+
+      display: grid;
+      place-items: center;
+
+      background: #e8f2ff;
+
+      color: #1677ff;
+
+      font-size: 32px;
+    }
+
+    .goal-box p {
+      color: #59667c;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       STATS
+    ========================== */
+
+    .stats {
+      display: grid;
+
+      grid-template-columns: repeat(4, 1fr);
+
+      background: white;
+
+      border: 1px solid #e1e7f0;
+
+      border-radius: 15px;
+
+      box-shadow: 0 10px 35px rgba(20, 40, 80, 0.06);
+
+      overflow: hidden;
+    }
+
+    .stat {
+      text-align: center;
+
+      padding: 30px 15px;
+
+      border-right: 1px solid #e7ebf2;
+    }
+
+    .stat:last-child {
+      border-right: none;
+    }
+
+    .stat strong {
+      display: block;
+
+      color: #102b62;
+
+      font-size: 29px;
+
+      margin-bottom: 3px;
+    }
+
+    .stat span {
+      color: #69758a;
+
+      font-size: 13px;
+    }
+
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .cta {
+      position: relative;
+
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 100% 0,
+          rgba(61, 152, 255, 0.3),
+          transparent 35%
+        ),
+        linear-gradient(
+          120deg,
+          #061945,
+          #0a4fb8
+        );
+
+      color: white;
+
+      border-radius: 18px;
+
+      padding: 40px 45px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .cta h2 {
+      font-size: 27px;
+
+      margin-bottom: 5px;
+    }
+
+    .cta p {
+      color: #c8d9f5;
+
+      font-size: 14px;
+    }
+
+    .cta .btn {
+      background: white;
+      color: #0b4aa8;
+
+      flex-shrink: 0;
+    }
+
+    .cta .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================== */
 
     footer {
-      text-align: center;
-      background: #0d47a1;
-      color: white;
-      padding: 25px 15px;
-      margin-top: 40px;
+      background: #020d25;
+
+      color: #b9c8e0;
+
+      padding: 60px 0 25px;
+
+      margin-top: 0;
     }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 30px;
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+
+      gap: 45px;
+
+      padding-bottom: 35px;
+
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-logo {
+      font-size: 22px;
+
+      color: white;
+
+      font-weight: 800;
+
+      margin-bottom: 12px;
+    }
+
+    .footer-logo span {
+      color: #2d8cff;
+    }
+
+    .footer-description {
+      font-size: 13px;
+
+      max-width: 280px;
+
+      line-height: 1.8;
+    }
+
+    .footer-title {
+      color: white;
+
+      font-size: 15px;
+
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 9px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+
+      color: #aebed8;
+
+      transition: 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #3b96ff;
+    }
+
+    .footer-contact p {
+      font-size: 13px;
+
+      margin-bottom: 9px;
+    }
+
+    .copyright {
+      text-align: center;
+
+      padding-top: 22px;
+
+      font-size: 12px;
+
+      color: #7f91ae;
+    }
+
+
+    /* =========================
+       BACK TO TOP
+    ========================== */
+
+    .top-button {
+      position: fixed;
+
+      right: 20px;
+      bottom: 20px;
+
+      width: 42px;
+      height: 42px;
+
+      display: grid;
+      place-items: center;
+
+      background: #1677ff;
+
+      color: white;
+
+      border-radius: 50%;
+
+      box-shadow: 0 8px 25px rgba(22,119,255,0.3);
+
+      font-size: 18px;
+
+      z-index: 100;
+
+      transition: 0.3s;
+    }
+
+    .top-button:hover {
+      transform: translateY(-4px);
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 950px) {
+
+      .nav-links {
+        gap: 16px;
       }
 
-      .card {
-        padding: 22px;
+      .hero-grid {
+        grid-template-columns: 1fr;
+
+        text-align: center;
       }
 
-      .profile img {
-        width: 120px;
-        height: 120px;
+      .hero-content {
+        margin: auto;
+      }
+
+      .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-photo {
+        order: -1;
+      }
+
+      .photo-ring {
+        width: 300px;
+        height: 300px;
+      }
+
+      .expertise-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .skills-goal {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+
+    @media (max-width: 700px) {
+
+      .nav-inner {
+        min-height: 62px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-button {
+        padding: 9px 15px;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-grid {
+        padding: 65px 0;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+        letter-spacing: -1.5px;
+      }
+
+      .hero-role {
+        font-size: 18px;
+      }
+
+      .photo-ring {
+        width: 250px;
+        height: 250px;
+      }
+
+      .photo-card {
+        min-width: 200px;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .section-title h2 {
+        font-size: 29px;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .skill-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .stat:nth-child(2) {
+        border-right: none;
+      }
+
+      .stat:nth-child(-n+2) {
+        border-bottom: 1px solid #e7ebf2;
+      }
+
+      .cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 30px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+      }
+    }
+
+
+    @media (max-width: 450px) {
+
+      .container {
+        width: 90%;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .photo-ring {
+        width: 220px;
+        height: 220px;
+      }
+
+      .photo-card {
+        bottom: -15px;
+      }
+
+      .info-card {
+        padding: 20px;
+      }
+
+      .info-row {
+        grid-template-columns: 32px 90px 1fr;
+
+        font-size: 12px;
+      }
+
+      .goal-box {
+        flex-direction: column;
+
+        text-align: center;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .stat {
+        border-right: none !important;
+
+        border-bottom: 1px solid #e7ebf2;
+      }
+
+      .stat:last-child {
+        border-bottom: none;
       }
     }
   </style>
@@ -148,119 +1241,689 @@
 
 <body>
 
-  <header>
-    <h1>About Shohrab Hossen</h1>
-    <p>IT Expert & Microfin360 Specialist</p>
-  </header>
+  <!-- =========================
+       NAVBAR
+  ========================== -->
 
-  <main class="container">
+  <nav class="navbar">
 
-    <section class="card profile">
-      <img src="../profile.jpg" alt="Shohrab Hossen">
-      <h2>Shohrab Hossen</h2>
-      <p>
-        IT professional with experience in Microfin360 software management,
-        CIB data processing, branch-level IT support and technology solutions.
-      </p>
-    </section>
+    <div class="container nav-inner">
 
-    <section class="card">
-      <h2>About Me</h2>
+      <a href="../index.html" class="logo">
+        Shohrab<span>-IT</span>
+      </a>
 
-      <p>
-        Hello! I am <strong>Shohrab Hossen</strong>, an IT professional
-        interested in technology, software management, data processing and
-        practical IT solutions.
-      </p>
+      <ul class="nav-links">
 
-      <p>
-        My professional experience includes working with Microfin360,
-        CIB-related data processing, branch IT operations, troubleshooting
-        and technical support.
-      </p>
+        <li>
+          <a href="../index.html">Home</a>
+        </li>
 
-      <p>
-        I enjoy learning new technologies and building useful digital
-        solutions that make everyday work easier and more efficient.
-      </p>
-    </section>
+        <li>
+          <a href="#about" class="active">About</a>
+        </li>
 
-    <section class="card">
-      <h2>My Expertise</h2>
+        <li>
+          <a href="#expertise">Skills</a>
+        </li>
 
-      <div class="skills">
+        <li>
+          <a href="#expertise">Services</a>
+        </li>
 
-        <div class="skill">
-          <h3>Microfin360</h3>
-          <p>
-            Software management, operational support and troubleshooting.
-          </p>
+        <li>
+          <a href="#goal">Projects</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+      </ul>
+
+      <a href="#contact" class="nav-button">
+        👤 Hire Me
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <header class="hero">
+
+    <div class="container hero-grid">
+
+      <div class="hero-content">
+
+        <span class="eyebrow">
+          ABOUT ME
+        </span>
+
+        <h1>
+          About<br>
+          <span>Shohrab Hossen</span>
+        </h1>
+
+        <div class="hero-role">
+          IT Expert &amp; Microfin360 Specialist
         </div>
 
-        <div class="skill">
-          <h3>CIB Data Processing</h3>
-          <p>
-            CIB-related data processing and handling of financial information.
-          </p>
-        </div>
+        <p class="hero-description">
+          IT professional with experience in Microfin360 software
+          management, CIB data processing, branch-level IT support
+          and technology solutions.
+        </p>
 
-        <div class="skill">
-          <h3>IT Support</h3>
-          <p>
-            Technical support, troubleshooting and branch-level IT solutions.
-          </p>
-        </div>
+        <div class="hero-buttons">
 
-        <div class="skill">
-          <h3>Web Technology</h3>
-          <p>
-            Website development, HTML, CSS and GitHub Pages.
-          </p>
+          <a href="../index.html" class="btn btn-primary">
+            🏠 Back to Home
+          </a>
+
+          <a href="#contact" class="btn btn-outline">
+            ✉ Contact Me
+          </a>
+
         </div>
 
       </div>
-    </section>
 
-    <section class="card">
-      <h2>Professional Skills</h2>
 
-      <ul>
-        <li>Microfin360 Software Management</li>
-        <li>CIB Data Processing</li>
-        <li>IT Support & Troubleshooting</li>
-        <li>Computer & Software Management</li>
-        <li>Web Development</li>
-        <li>Data Management</li>
-        <li>Technical Problem Solving</li>
-      </ul>
-    </section>
+      <div class="hero-photo">
 
-    <section class="card">
-      <h2>My Goal</h2>
+        <div class="photo-ring">
 
-      <p>
-        My goal is to continuously improve my technical skills and use
-        technology to create reliable, practical and user-friendly solutions.
-      </p>
-    </section>
+          <img
+            src="../profile.jpg"
+            alt="Shohrab Hossen"
+          >
 
-    <section class="card contact">
-      <h2>Explore My Website</h2>
+        </div>
 
-      <p>
-        Visit the main website to learn more about my work and projects.
-      </p>
+        <div class="photo-card">
 
-      <a href="../">Home</a>
-    </section>
+          <div class="photo-icon">
+            👤
+          </div>
 
-  </main>
+          <div>
+            <strong>Shohrab Hossen</strong>
+            <small>IT Professional</small>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       ABOUT ME
+  ========================== -->
+
+  <section class="section section-light" id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>About Me</h2>
+
+        <div class="title-line"></div>
+
+      </div>
+
+
+      <div class="about-grid">
+
+        <div class="about-text">
+
+          <p>
+            Hello! I am <strong>Shohrab Hossen</strong>, an IT
+            professional interested in technology, software management,
+            data processing and practical IT solutions.
+          </p>
+
+          <p>
+            My professional experience includes working with
+            Microfin360, CIB-related data processing, branch IT
+            operations, troubleshooting and technical support.
+          </p>
+
+          <p>
+            I enjoy learning new technologies and building useful
+            digital solutions that make everyday work easier,
+            faster and more efficient.
+          </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+          <div class="info-row">
+
+            <div class="info-icon">👤</div>
+
+            <div class="info-label">Name</div>
+
+            <div class="info-value">
+              Shohrab Hossen
+            </div>
+
+          </div>
+
+
+          <div class="info-row">
+
+            <div class="info-icon">💼</div>
+
+            <div class="info-label">Profession</div>
+
+            <div class="info-value">
+              IT Expert &amp; Microfin360 Specialist
+            </div>
+
+          </div>
+
+
+          <div class="info-row">
+
+            <div class="info-icon">🏆</div>
+
+            <div class="info-label">Speciality</div>
+
+            <div class="info-value">
+              IT &amp; Software Support
+            </div>
+
+          </div>
+
+
+          <div class="info-row">
+
+            <div class="info-icon">🌐</div>
+
+            <div class="info-label">Website</div>
+
+            <div class="info-value">
+              Shohrab-IT
+            </div>
+
+          </div>
+
+
+          <div class="info-row">
+
+            <div class="info-icon">📍</div>
+
+            <div class="info-label">Location</div>
+
+            <div class="info-value">
+              Bangladesh
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       EXPERTISE
+  ========================== -->
+
+  <section class="section" id="expertise">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <h2>My Expertise</h2>
+
+        <div class="title-line"></div>
+
+      </div>
+
+
+      <div class="expertise-grid">
+
+
+        <div class="expertise-card">
+
+          <div class="expertise-icon">
+            🖥️
+          </div>
+
+          <h3>
+            Microfin360
+          </h3>
+
+          <p>
+            Software management, operational support,
+            troubleshooting and system assistance.
+          </p>
+
+        </div>
+
+
+        <div class="expertise-card">
+
+          <div class="expertise-icon">
+            🗄️
+          </div>
+
+          <h3>
+            CIB Data Processing
+          </h3>
+
+          <p>
+            CIB-related data processing and handling
+            of financial information.
+          </p>
+
+        </div>
+
+
+        <div class="expertise-card">
+
+          <div class="expertise-icon">
+            🎧
+          </div>
+
+          <h3>
+            IT Support
+          </h3>
+
+          <p>
+            Technical support, troubleshooting and
+            branch-level IT solutions.
+          </p>
+
+        </div>
+
+
+        <div class="expertise-card">
+
+          <div class="expertise-icon">
+            &lt;/&gt;
+          </div>
+
+          <h3>
+            Web Technology
+          </h3>
+
+          <p>
+            Website development, HTML, CSS and
+            GitHub Pages.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       SKILLS + GOAL
+  ========================== -->
+
+  <section class="section section-light" id="goal">
+
+    <div class="container">
+
+      <div class="skills-goal">
+
+
+        <div>
+
+          <h2 class="sub-title">
+            Professional Skills
+          </h2>
+
+          <div class="skill-columns">
+
+            <div class="skill-item">
+              <span class="check">✓</span>
+              <span>Microfin360 Software Management</span>
+            </div>
+
+            <div class="skill-item">
+              <span class="check">✓</span>
+              <span>Web Development</span>
+            </div>
+
+            <div class="skill-item">
+              <span class="check">✓</span>
+              <span>CIB Data Processing</span>
+            </div>
+
+            <div class="skill-item">
+              <span class="check">✓</span>
+              <span>Data Management</span>
+            </div>
+
+            <div class="skill-item">
+              <span class="check">✓</span>
+              <span>IT Support &amp; Troubleshooting</span>
+            </div>
+
+            <div class="skill-item">
+              <span class="check">✓</span>
+              <span>Technical Problem Solving</span>
+            </div>
+
+            <div class="skill-item">
+              <span class="check">✓</span>
+              <span>Computer &amp; Software Management</span>
+            </div>
+
+            <div class="skill-item">
+              <span class="check">✓</span>
+              <span>Internet &amp; Networking</span>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div>
+
+          <h2 class="sub-title">
+            My Goal
+          </h2>
+
+          <div class="goal-box">
+
+            <div class="goal-icon">
+              🎯
+            </div>
+
+            <p>
+              My goal is to continuously improve my technical
+              skills and use technology to create reliable,
+              practical and user-friendly solutions that add
+              value and make a positive impact.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       STATS
+  ========================== -->
+
+  <section class="section">
+
+    <div class="container">
+
+      <div class="stats">
+
+        <div class="stat">
+
+          <strong>IT</strong>
+
+          <span>
+            Professional Focus
+          </span>
+
+        </div>
+
+
+        <div class="stat">
+
+          <strong>360</strong>
+
+          <span>
+            Microfin360 Expertise
+          </span>
+
+        </div>
+
+
+        <div class="stat">
+
+          <strong>24/7</strong>
+
+          <span>
+            Learning Mindset
+          </span>
+
+        </div>
+
+
+        <div class="stat">
+
+          <strong>100%</strong>
+
+          <span>
+            Dedication
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CTA
+  ========================== -->
+
+  <section class="section" id="contact">
+
+    <div class="container">
+
+      <div class="cta">
+
+        <div>
+
+          <h2>
+            Let's Work Together
+          </h2>
+
+          <p>
+            I am always open to discussing new ideas,
+            technology and opportunities.
+          </p>
+
+        </div>
+
+        <a
+          href="mailto:shohraabhossen2238@gmail.com"
+          class="btn"
+        >
+          ✉ Contact Me →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
-    <p>
-      © 2026 Shohrab Hossen. All Rights Reserved.
-    </p>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+
+        <div>
+
+          <div class="footer-logo">
+            Shohrab<span>-IT</span>
+          </div>
+
+          <p class="footer-description">
+            IT Expert &amp; Microfin360 Specialist.
+            Building practical technology solutions
+            with dedication and continuous learning.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3 class="footer-title">
+            Quick Links
+          </h3>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="../index.html">
+                Home
+              </a>
+            </li>
+
+            <li>
+              <a href="#about">
+                About
+              </a>
+            </li>
+
+            <li>
+              <a href="#expertise">
+                Skills
+              </a>
+            </li>
+
+            <li>
+              <a href="#goal">
+                Goal
+              </a>
+            </li>
+
+            <li>
+              <a href="#contact">
+                Contact
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3 class="footer-title">
+            Expertise
+          </h3>
+
+          <ul class="footer-links">
+
+            <li>
+              <a href="#expertise">
+                Microfin360
+              </a>
+            </li>
+
+            <li>
+              <a href="#expertise">
+                CIB Data Processing
+              </a>
+            </li>
+
+            <li>
+              <a href="#expertise">
+                IT Support
+              </a>
+            </li>
+
+            <li>
+              <a href="#expertise">
+                Web Technology
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+          <h3 class="footer-title">
+            Contact Info
+          </h3>
+
+          <p>
+            📧 shohraabhossen2238@gmail.com
+          </p>
+
+          <p>
+            📍 Bangladesh
+          </p>
+
+          <p>
+            🌐 Shohrab-IT
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="copyright">
+
+        © 2026 Shohrab Hossen. All Rights Reserved.
+
+      </div>
+
+    </div>
+
   </footer>
+
+
+  <!-- BACK TO TOP -->
+
+  <a
+    href="#"
+    class="top-button"
+    aria-label="Back to top"
+  >
+    ↑
+  </a>
+
 
 </body>
 </html>
